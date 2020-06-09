@@ -51,4 +51,10 @@ class SocialLinksServiceTest(unittest.TestCase):
         commit()
         response = self.api_session.get("/@social-links")
         results = response.json()
-        self.assertEqual(results, test_data)
+        self.assertEqual(len(results), 2)
+        self.assertEqual(
+            results[0], {"title": "foo", "icon": "bar", "url": "baz"}
+        )
+        self.assertEqual(
+            results[1], {"title": "xxx", "icon": "yyy", "url": "zzz"}
+        )
