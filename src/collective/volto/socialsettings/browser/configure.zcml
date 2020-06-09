@@ -4,18 +4,12 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="collective.volto.socialsettings">
 
-  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
-  <include package="z3c.jbot" file="meta.zcml" />
-  <browser:jbot
-      directory="overrides"
+      <browser:page
+      class=".controlpanel.SocialSettings"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
       layer="collective.volto.socialsettings.interfaces.ICollectiveVoltoSocialsettingsLayer"
-      />
-
-  <!-- Publish static files -->
-  <plone:static
-      name="collective.volto.socialsettings"
-      type="plone"
-      directory="static"
-      />
+      name="social-settings"
+      permission="cmf.ManagePortal"
+  />
 
 </configure>

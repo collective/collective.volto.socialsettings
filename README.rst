@@ -1,30 +1,50 @@
-.. This README is meant for consumption by humans and pypi. Pypi can render rst files so please do not use Sphinx features.
-   If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
-   This text does not appear on pypi or github. It is a comment.
 
-===============================
-collective.volto.socialsettings
-===============================
+=====================
+Volto Social Settings
+=====================
 
-Tell me what your product does
+.. image:: https://travis-ci.com/collective/collective.volto.socialsettings.svg?branch=master
+    :target: https://travis-ci.com/collective/collective.volto.socialsettings
+
+Add-on for manage a list of social network links on Volto
 
 Features
 --------
 
-- Can be bullet points
+- Control panel for plone registry to manage social links settings.
+- Restapi view that exposes these settings for Volto
 
+Volto endpoint
+--------------
 
-Examples
---------
+Anonymous users can't access registry resources by default with plone.restapi (there is a special permission).
 
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
+To avoid enabling registry access to everyone, this package exposes a dedicated restapi route with the list of social links: *@social-links*::
 
+    > curl -i http://localhost:8080/Plone/@social-links -H 'Accept: application/json'
 
-Documentation
+And the result is something like this::
+
+    [
+        {
+            "title":"foo",
+            "icon": "bar",
+            "url": "http://foo.com"
+        },
+        ...
+    ]
+
+Control panel
 -------------
 
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
+You can edit settings directly from Volto because the control has been registered on Plone and available with plone.restapi.
+
+
+
+Volto integration
+-----------------
+
+To use this product in Volto, your Volto project needs to include a new plugin: https://github.com/collective/volto-social-settings
 
 
 Translations
@@ -32,7 +52,7 @@ Translations
 
 This product has been translated into
 
-- Klingon (thanks, K'Plai)
+- Italian
 
 
 Installation
@@ -56,17 +76,18 @@ Contribute
 
 - Issue Tracker: https://github.com/collective/collective.volto.socialsettings/issues
 - Source Code: https://github.com/collective/collective.volto.socialsettings
-- Documentation: https://docs.plone.org/foo/bar
-
-
-Support
--------
-
-If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
 
 
 License
 -------
 
 The project is licensed under the GPLv2.
+
+Authors
+-------
+
+This product was developed by **RedTurtle Technology** team.
+
+.. image:: https://avatars1.githubusercontent.com/u/1087171?s=100&v=4
+   :alt: RedTurtle Technology Site
+   :target: http://www.redturtle.it/
