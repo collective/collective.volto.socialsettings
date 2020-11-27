@@ -5,6 +5,8 @@ from plone.restapi.services import Service
 from zope.interface import implementer
 from zope.publisher.interfaces import IPublishTraverse
 
+import json
+
 
 @implementer(IPublishTraverse)
 class SocialLinksGet(Service):
@@ -15,11 +17,4 @@ class SocialLinksGet(Service):
         records = api.portal.get_registry_record(
             "social_links", interface=ISocialSettings
         )
-        result = []
-        for record in records:
-            values = record.split("|")
-            if len(values) == 3:
-                result.append(
-                    {"title": values[0], "icon": values[1], "url": values[2]}
-                )
-        return result
+        return json.loads(records)
