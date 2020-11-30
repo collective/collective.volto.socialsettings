@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.1 (unreleased)
+0.1.1 (2020-11-30)
 ------------------
 
 - Changed field type in registry.
