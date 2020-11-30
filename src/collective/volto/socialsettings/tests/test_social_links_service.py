@@ -11,6 +11,7 @@ from plone.app.testing import TEST_USER_ID
 from plone.restapi.testing import RelativeSession
 from transaction import commit
 
+import json
 import unittest
 
 
@@ -44,9 +45,12 @@ class SocialLinksServiceTest(unittest.TestCase):
         self.assertEqual(results, [])
 
     def test_right_data(self):
-        test_data = ["foo|bar|baz", "xxx|yyy|zzz"]
+        test_data = [
+            {"title": "foo", "icon": "bar", "url": "baz"},
+            {"title": "xxx", "icon": "yyy", "url": "zzz"},
+        ]
         api.portal.set_registry_record(
-            "social_links", test_data, interface=ISocialSettings
+            "social_links", json.dumps(test_data), interface=ISocialSettings
         )
         commit()
         response = self.api_session.get("/@social-links")
