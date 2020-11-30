@@ -17,4 +17,6 @@ class SocialLinksGet(Service):
         records = api.portal.get_registry_record(
             "social_links", interface=ISocialSettings
         )
+        if not records:
+            return []
         return json.loads(records)
