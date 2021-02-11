@@ -16,7 +16,7 @@ long_description = "\n\n".join(
 
 setup(
     name="collective.volto.socialsettings",
-    version="0.1.2.dev0",
+    version="0.1.2",
     description="Add-on for Volto to manage a list of social network links",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/

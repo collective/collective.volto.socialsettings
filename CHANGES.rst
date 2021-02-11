@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.2 (unreleased)
+0.1.2 (2021-02-11)
 ------------------
 
 - Add layer to social-links route to not break if not installed.
