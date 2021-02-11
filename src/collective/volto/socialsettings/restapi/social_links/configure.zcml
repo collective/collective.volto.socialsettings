@@ -9,6 +9,7 @@
     for="Products.CMFCore.interfaces.ISiteRoot"
     factory=".get.SocialLinksGet"
     permission="zope2.View"
+    layer="collective.volto.socialsettings.interfaces.ICollectiveVoltoSocialsettingsLayer"
     />
 
 </configure>
