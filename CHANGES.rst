@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.3 (unreleased)
+0.2.0 (2021-10-10)
 ------------------
 
 - p.a.caching rules for rest api services.
