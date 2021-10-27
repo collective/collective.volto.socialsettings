@@ -5,8 +5,8 @@ Changelog
 0.2.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- fix python_requires.
+  [nzambello]
 
 0.2.0 (2021-10-10)
 ------------------
