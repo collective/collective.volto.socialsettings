@@ -5,6 +5,9 @@ Changelog
 0.2.2 (unreleased)
 ------------------
 
+- Added Spanish translations.
+  [macagua]
+
 - Added more translations strings.
   [macagua]
 
