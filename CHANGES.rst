@@ -5,7 +5,8 @@ Changelog
 0.2.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Added more translations strings.
+  [macagua]
 
 
 0.2.1 (2021-10-27)
