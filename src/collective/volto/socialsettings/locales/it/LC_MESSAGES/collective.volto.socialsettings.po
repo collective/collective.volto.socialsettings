@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../profiles/default/controlpanel.xml
 msgid "Social settings"
-msgstr ""
+msgstr "Social"
 
 #: ../configure.zcml:37
 msgid "Uninstalls the collective.volto.socialsettings add-on."
@@ -37,7 +37,7 @@ msgstr ""
 #. Default: "Insert a list of values for social links."
 #: ../interfaces.py:13
 msgid "social_links_help"
-msgstr ""
+msgstr "Inserire una lista di social"
 
 #. Default: "Social links"
 #: ../interfaces.py:12
@@ -47,4 +47,4 @@ msgstr ""
 #. Default: "Social Settings"
 #: ../browser/controlpanel.py:10
 msgid "social_settings_label"
-msgstr ""
+msgstr "Impostazioni social"
