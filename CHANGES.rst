@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.2.2 (unreleased)
+0.2.2 (2024-12-12)
 ------------------
 
 - Added Spanish translations.
